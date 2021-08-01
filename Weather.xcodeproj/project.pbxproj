@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BA6CC2926B747EF004350A6 /* ConfigReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA6CC2826B747EF004350A6 /* ConfigReader.swift */; };
 		5BD00B6226B735F3005910BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD00B6126B735F3005910BB /* AppDelegate.swift */; };
 		5BD00B6426B735F3005910BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD00B6326B735F3005910BB /* SceneDelegate.swift */; };
 		5BD00B6826B735F5005910BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD00B6726B735F5005910BB /* Assets.xcassets */; };
@@ -17,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BA6CC2426B744BE004350A6 /* Api.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Api.xcconfig; sourceTree = "<group>"; };
+		5BA6CC2526B74505004350A6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		5BA6CC2626B7450D004350A6 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		5BA6CC2826B747EF004350A6 /* ConfigReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigReader.swift; sourceTree = "<group>"; };
 		5BD00B5E26B735F3005910BB /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD00B6126B735F3005910BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BD00B6326B735F3005910BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +44,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BA6CC2326B7449F004350A6 /* Configures */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6CC2426B744BE004350A6 /* Api.xcconfig */,
+				5BA6CC2526B74505004350A6 /* Debug.xcconfig */,
+				5BA6CC2626B7450D004350A6 /* Release.xcconfig */,
+			);
+			path = Configures;
+			sourceTree = "<group>";
+		};
+		5BA6CC2726B747DC004350A6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5BA6CC2826B747EF004350A6 /* ConfigReader.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		5BD00B5526B735F3005910BB = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +81,8 @@
 		5BD00B6026B735F3005910BB /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				5BA6CC2726B747DC004350A6 /* Utils */,
+				5BA6CC2326B7449F004350A6 /* Configures */,
 				5BD00B7726B736B0005910BB /* Main */,
 				5BD00B6126B735F3005910BB /* AppDelegate.swift */,
 				5BD00B6326B735F3005910BB /* SceneDelegate.swift */,
@@ -167,6 +192,7 @@
 				5BD00B7626B73695005910BB /* MainViewController.swift in Sources */,
 				5BD00B7926B736CD005910BB /* MainView.swift in Sources */,
 				5BD00B6226B735F3005910BB /* AppDelegate.swift in Sources */,
+				5BA6CC2926B747EF004350A6 /* ConfigReader.swift in Sources */,
 				5BD00B6426B735F3005910BB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +213,7 @@
 /* Begin XCBuildConfiguration section */
 		5BD00B7026B735F5005910BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BA6CC2526B74505004350A6 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -248,6 +275,7 @@
 		};
 		5BD00B7126B735F5005910BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BA6CC2626B7450D004350A6 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

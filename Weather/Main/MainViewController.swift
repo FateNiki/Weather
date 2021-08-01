@@ -8,8 +8,8 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-    override func loadView() {
-        super.loadView()
-        self.view = MainView()
-    }
+  override func loadView() {
+    super.loadView()
+    self.view = MainView()
+  }
 }
