@@ -6,20 +6,26 @@
 //
 
 import Domain
-import MapKit
 
 public class CityRepo: Domain.CityRepo {
-  public init() { }
+  public init() {}
 
   public func getCities(with name: String) async -> [City] {
-    let request = MKLocalSearch.Request()
-    request.resultTypes = .address
-    request.naturalLanguageQuery = name
-    let localSearch = MKLocalSearch(request: request)
-    let response = try? await localSearch.start()
-    guard let items = response?.mapItems else {
+    let query = name.lowercased()
+    let result = cities.filter {
+      $0.name.lowercased().contains(query)
+    }
+    return result.mapToDomain()
+  }
+
+  private var cities: [CityDTO] {
+    guard
+      let jsonURL = Bundle(for: Self.self).url(forResource: "city.list", withExtension: "json"),
+      let json = try? Data(contentsOf: jsonURL)
+    else {
       return []
     }
-    return items.mapToDomain()
+
+    return (try? JSONDecoder().decode([CityDTO].self, from: json)) ?? []
   }
 }

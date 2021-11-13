@@ -25,7 +25,7 @@ final class MainViewController: UIViewController {
     self.view = MainView()
 
     Task {
-      let cities = await useCase.searchCities(with: "Иж")
+      let cities = await useCase.searchCities(with: "Izhevsk")
       print(cities)
     }
   }
