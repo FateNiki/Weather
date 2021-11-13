@@ -1,0 +1,12 @@
+language: swift
+os: osx
+osx_image: xcode13.1
+xcode_scheme: Weather
+xcode_destination: platform=iOS Simulator,OS=15.1,name=iPhone 13 mini
+cache:
+  bundler: true
+  cocoapods: true
+install:
+  - bundle install
+script:
+  - fastlane build_and_test 
